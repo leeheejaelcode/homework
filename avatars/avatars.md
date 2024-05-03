@@ -26,9 +26,10 @@
 ```
 
 3. span의 접속중 표시로 on/off를 컨트롤하기 위해 .off를 추가했습니다
-   ```html
-   <span class="off"></span>
-   ```
+
+```html
+<span class="off"></span>
+```
 
 ### CSS
 
@@ -51,9 +52,11 @@ figure {
 }
 ```
 
+#### position
+
 3. image,span을 디자인하고
-   span을 이미지 위에하기 위해 span의<pre><code>{position:absolute;}</code></pre> 설정하고
-   이미지를 figure의 고정하기위해 figure의 <pre><code>{position:relative;}</code></pre>로 설정했습니다
+   span을 이미지 위에하기 위해 span의 position을 absolute로 설정하고
+   이미지를 figure의 고정하기위해 figure의 position을 relative로 설정했습니다
 
 ```css
 span {
@@ -73,6 +76,8 @@ span.off {
   background-color: #dbdbdb;
 }
 ```
+
+#### flex
 
 5. display: flex가 적용되는 브라우저에서는 flex가 적용되게 하였습니다
 
