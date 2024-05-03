@@ -1,5 +1,58 @@
-main {
-  width: 800px;
-  height: 500px;
-  border: 1px solid red;
+* {
+  margin: 0;
+  padding: 0px;
 }
+
+main {
+  padding: 50px;
+}
+
+.image-container {
+  display: flow-root;
+}
+
+figure {
+  float: left;
+  position: relative;
+}
+
+figure:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+}
+
+span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #4cfe88;
+  border: 1px solid #fff;
+  bottom: 0;
+  right: 0;
+}
+
+span.off {
+  background-color: #dbdbdb;
+}
+
+/* @supports (display: flex) {
+  figure {
+    float: left;
+    clear: both;
+  }
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    display: flex;
+  }
+} */
