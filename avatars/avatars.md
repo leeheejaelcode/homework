@@ -8,16 +8,16 @@
    이미지위에 접속중 표시를 겹쳐야하기 때문에
    image와 span을 figure로 감쌌습니다.
 
-   ```html
-   <figure>
-     <img
-       class="image image1"
-       src="../images/faces/face1.jpg"
-       alt="여자 연예인 얼굴"
-     />
-     <span class="off"></span>
-   </figure>
-   ```
+```html
+<figure>
+  <img
+    class="image image1"
+    src="../images/faces/face1.jpg"
+    alt="여자 연예인 얼굴"
+  />
+  <span class="off"></span>
+</figure>
+```
 
 2. figure의 정렬이 바뀌기 때문에 figure를 div로 감쌌습니다.
 
