@@ -3,56 +3,62 @@
   padding: 0px;
 }
 
-main {
+body {
   padding: 50px;
 }
 
-.image-container {
+main {
   display: flow-root;
+  width: 345px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 figure {
   float: left;
+
   position: relative;
 }
 
-figure:nth-child(n + 2) {
-  margin-left: 20px;
+figure:nth-child(-n + 3),
+figure:nth-child(n + 4) {
+  margin-right: 20px;
 }
 
 .image {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  position: relative;
 }
 
-span {
+figcaption {
   position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #4cfe88;
+  background-color: #dbdbdb;
   border: 1px solid #fff;
   bottom: 0;
   right: 0;
 }
 
-span.off {
-  background-color: #dbdbdb;
+figcaption.on {
+  background-color: #4cfe88;
 }
-
-/* @supports (display: flex) {
+/* 
+@supports (display: flex) {
   figure {
-    float: left;
     clear: both;
   }
   main {
     display: flex;
-    flex-direction: column-reverse;
+    flex-flow: row wrap;
   }
 
-  .image-container {
-    display: flex;
+  figure:nth-child(n + 5):nth-child(-n + 8) {
+    order: -1;
   }
 } */
