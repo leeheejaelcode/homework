@@ -1,0 +1,152 @@
+/* 기본 스타일 */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+  --base-font-color: #181818;
+}
+
+body {
+  font-family: var(--base-font-family);
+  line-height: 1.15;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-font-color);
+}
+
+/* 로그인 */
+.login {
+  margin-top: 100px;
+  padding: 1.25rem;
+  position: relative;
+
+  /* 로그인 폼 */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+
+    fieldset {
+      margin-top: 30px;
+      border: 0;
+      width: 100%;
+    }
+  }
+
+  .form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    /* input 컴포넌트 */
+    .form-input {
+      input {
+        width: 100%;
+        inline-size: 100%;
+        height: 45px;
+        block-size: 45px;
+        padding: 0.8rem;
+        font-size: 0.875rem;
+        border: none;
+        border: 1px solid #dadada;
+        background-color: #fff;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #03df5d;
+        background-color: #e9f0fd;
+      }
+    }
+  }
+
+  /* button 컴포넌트 */
+  .button {
+    border: 0;
+    padding: 0.8rem 0.625rem;
+    color: #fff;
+    background-color: #03cf5d;
+    font-size: 0.875rem;
+    height: 45px;
+    width: 100%;
+    margin-top: 0.625rem;
+  }
+
+  .login-sign {
+    list-style: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    inline-size: 100%;
+
+    input {
+      --input-width: 19px;
+      --input-height: 19px;
+
+      position: absolute;
+      appearance: none;
+      width: var(--input-width);
+      inline-size: var(--input-width);
+      height: var(--input-height);
+      block-size: var(--input-height);
+    }
+
+    label {
+      background: url(./icons/unchecked.svg) no-repeat 0 0 / contain;
+      padding-left: 1.5625rem;
+    }
+
+    input:checked + label {
+      background-image: url(./icons/checked.svg);
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input:focus-visible {
+      outline: 1px solid #000;
+    }
+
+    .icon-link {
+      display: none;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .login {
+    /* 로그인 폼 */
+    .login-form {
+      width: 500px;
+      inline-size: 500px;
+      margin: auto;
+    }
+
+    .login-sign {
+      justify-content: space-between;
+
+      .icon-link {
+        display: block;
+        float: left;
+        margin-right: 5px;
+      }
+      span {
+        display: inline;
+      }
+    }
+  }
+}
