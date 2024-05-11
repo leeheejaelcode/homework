@@ -9,7 +9,7 @@ body {
 
 main {
   display: flow-root;
-  width: 345px;
+  inline-size: 345px;
 }
 
 h1 {
@@ -19,7 +19,6 @@ h1 {
 
 figure {
   float: left;
-
   position: relative;
 }
 
@@ -48,17 +47,17 @@ figcaption {
 figcaption.on {
   background-color: #4cfe88;
 }
-/* 
+
 @supports (display: flex) {
   figure {
-    clear: both;
+    float: none;
   }
   main {
     display: flex;
     flex-flow: row wrap;
   }
 
-  figure:nth-child(n + 5):nth-child(-n + 8) {
-    order: -1;
+  figure:nth-child(-n + 4) {
+    order: 1;
   }
-} */
+}
