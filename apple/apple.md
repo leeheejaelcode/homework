@@ -35,44 +35,6 @@
 ```html
 <!-- grid container 시작 -->
 <div class="grid-container">
-  <div class="box white-box cols-12 lg-cols-6">
-    <article class="card iphone-15">
-      <h2>iPhone 15</h2>
-      <p class="explanation" aria-label="iphone-15 제품 설명">
-        새로운 카메라.
-        <br class="lg-none" />새로운 디자인. <br class="lg-none" />새로움이
-        물씬.
-      </p>
-      <ul>
-        <li><a href="/" class="link more">더 알아보기</a></li>
-        <li><a href="/" class="link price">가격 보기</a></li>
-      </ul>
-    </article>
-  </div>
-  <div class="box dark-box cols-12 lg-cols-6">
-    <article class="card watch">
-      <h2>WATCH</h2>
-      <p class="explanation" aria-label="apple watch 제품 설명">
-        보다 똑똑, 보다 또렷, 보다 강력.
-      </p>
-      <ul>
-        <li><a href="/" class="link more">더 알아보기</a></li>
-        <li><a href="/" class="link price">가격 보기</a></li>
-      </ul>
-    </article>
-  </div>
-  <div class="box white-box cols-12 lg-cols-6">
-    <article class="card macbook-air">
-      <h2>MacBook Air</h2>
-      <p class="explanation" aria-label="MacBook Air 제품 설명">
-        날렵하게. 강력하게. M3답게.
-      </p>
-      <ul>
-        <li><a href="/" class="link more">더 알아보기</a></li>
-        <li><a href="/" class="link price">가격 보기</a></li>
-      </ul>
-    </article>
-  </div>
   <div class="box dark-box cols-12 lg-cols-6">
     <article class="card airpods-pro">
       <h2>airPods Pro</h2>
