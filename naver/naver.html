@@ -23,7 +23,7 @@
           <a href="#">
             <picture>
               <source srcset="./logo.svg" type="image/svg" />
-              <img src="./logo.png" alt="네이버 png 로고" />
+              <img src="./logo.png" alt="네이버" />
             </picture>
           </a>
         </h1>
@@ -54,18 +54,33 @@
             </div>
           </div>
         </fieldset>
-        <button type="submit" class="login-button button">로그인</button>
         <ul class="login-sign">
           <li>
-            <input type="checkbox" id="saveLogin" name="saveLogin" />
+            <input
+              type="checkbox"
+              id="saveLogin"
+              name="saveLogin"
+              class="saveLogin"
+            />
             <label for="saveLogin">로그인 상태유지</label>
           </li>
           <li>
-            <a href="./ip_security.html" target="_blank" class="icon-link"
+            <a
+              href="./ip_security.html"
+              target="_blank"
+              class="icon-link"
+              rel="noopener noreferrer"
               >IP 보안</a
-            ><span tabindex="0" aria-label="IP 보안상태">ON</span>
+            >
+            <div class="onOff">
+              <label for="checkbox" aria-label="IP보안 여부" class="sr-only"
+                >IP보안</label
+              >
+              <input type="checkbox" name="checkbox" id="checkbox" />
+            </div>
           </li>
         </ul>
+        <button type="submit" class="login-button button">로그인</button>
       </form>
     </section>
   </body>

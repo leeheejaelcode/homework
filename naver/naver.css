@@ -101,28 +101,49 @@ a {
       block-size: var(--input-height);
     }
 
-    label {
+    .saveLogin + label {
       background: url(./icons/unchecked.svg) no-repeat 0 0 / contain;
       padding-left: 1.5625rem;
     }
 
-    input:checked + label {
+    .saveLogin:checked + label {
       background-image: url(./icons/checked.svg);
     }
 
-    input:focus {
+    .saveLogin:focus {
       outline: none;
     }
 
-    input:focus-visible {
+    .saveLogin:focus-visible {
       outline: 1px solid #000;
     }
 
     .icon-link {
       display: none;
     }
-    span {
-      display: none;
+  }
+}
+
+li:nth-child(2) {
+  display: flex;
+
+  .onOff {
+    display: none;
+
+    input {
+      position: static;
+    }
+
+    input::after {
+      content: "ON";
+      font-size: 14px;
+      color: #03cf5d;
+    }
+
+    input:checked::after {
+      content: "OFF";
+      font-size: 14px;
+      color: var(--base-font-color);
     }
   }
 }
@@ -144,8 +165,8 @@ a {
         float: left;
         margin-right: 5px;
       }
-      span {
-        display: inline;
+      .onOff {
+        display: block;
       }
     }
   }

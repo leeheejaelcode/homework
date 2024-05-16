@@ -1,0 +1,207 @@
+@import url(card-component.css);
+@import url(base.css);
+@import url(reset.css);
+@import url(theme.css);
+/* 카드 레이아웃 */
+
+:root {
+  /* 폰트 사이즈 */
+  --lg-button-text: var(--x-small-text); /* 라지 사이즈 버튼 텍스트*/
+  --sm-button-text: var(--xx-small-text); /* 스몰 사이즈 버튼 텍스트 */
+  --release-date-text: var(--small-text); /* 출시일 텍스트*/
+  --lg-main-title: var(--extra-large-text); /* 라지 제목 텍스트*/
+  --sm-main-title: var(--large-text); /* 스몰 제목 텍스트*/
+  --lg-sub-title: var(--medium-text); /* 라지 부 제목 텍스트*/
+  --sm-sub-title: var(--base-text); /* 스몰 부 제목 텍스트*/
+
+  /* 폰트 컬러 */
+  --white-text: var(--white);
+  --gray-text: var(--gray);
+  --black-text: var(--black);
+  --red-text: var(--red);
+
+  /* 여백 */
+  --x-small-spacing: 0.5rem; /* 8px - 버튼(링크) 상,하단 안쪽 여백, 부제목 하단 여백 */
+  --small-spacing: 0.75rem; /* 12px - 카드 제목, 부제목, 버튼(링크)간 여백(gap), 버튼(링크) 좌,우 안쪽 여백 */
+  --base-spacing: 1rem; /* 16px - 2개의 버튼(링크) 사이 여백 (공통) */
+  --large-spacing: 2.5rem; /* 40px - Small Screen 상단 여백 */
+  --extra-large-spacing: 3.75rem; /* 60px - Large Screen 상단 여백 */
+
+  --line-normal: 1.5; /* 부제목 줄간격 */
+
+  /* 보더, 버튼, 버튼배경 */
+  --blue-100: #2997ff;
+  --blue-200: #0077ed;
+  --blue-300: #0071e3;
+  --blue-400: #006edb;
+}
+
+/* box 공통 속성 */
+.box {
+  margin-top: 1rem;
+  h2 {
+    font-size: var(--sm-main-title);
+    font-weight: 700;
+  }
+
+  .explanation {
+    font-size: var(--sm-sub-title);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--x-small-spacing);
+  }
+
+  .release-date {
+    font-size: var(--release-date-text);
+    color: var(--gray-text);
+  }
+
+  ul {
+    .link {
+      display: inline-block;
+      font-size: var(--sm-button-text);
+      transition: ease all 0.5s;
+    }
+
+    .more {
+      color: var(--white-text);
+    }
+  }
+}
+/* 어두운 테마 */
+.dark-box {
+  h2,
+  .explanation {
+    color: var(--white-text);
+  }
+
+  ul {
+    .link {
+      background-color: transparent;
+      border: 1px solid var(--blue-100);
+
+      &:hover {
+        box-shadow: 0px 0px 15px 1px var(--white-text);
+      }
+    }
+
+    .more {
+      background-color: var(--blue-100);
+    }
+
+    .price {
+      color: var(--blue-100);
+    }
+  }
+}
+/* 밝은 테마 */
+.white-box {
+  h2,
+  .explanation {
+    color: var(--black-text);
+  }
+
+  ul {
+    .link {
+      border: 1px solid var(--black-text);
+      background-color: transparent;
+
+      &:hover {
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 70%);
+      }
+    }
+
+    .more {
+      background-color: var(--black-text);
+    }
+
+    .price {
+      color: var(--black-text);
+    }
+  }
+}
+
+.ipad-pro {
+  background-image: image-set(
+    url(../products/ipad_pro.jpeg),
+    url(../products/ipad_pro_2x.jpeg)
+  );
+}
+
+.ipad-air {
+  background-image: image-set(
+    url(../products/ipad_air.jpeg),
+    url(../products/ipad_air_2x.jpeg)
+  );
+}
+
+.iphone-15pro {
+  background-image: image-set(
+    url(../products/iphone15_pro.jpeg),
+    url(../products/iphone15_pro_2x.jpeg)
+  );
+}
+
+.iphone-15 {
+  background-image: image-set(
+    url(../products/iphone15.jpeg),
+    url(../products/iphone15.jpeg)
+  );
+}
+
+.watch {
+  background-image: image-set(
+    url(../products/apple_watch.jpeg),
+    url(../products/apple_watch_2x.jpeg)
+  );
+}
+.macbook-air {
+  background-image: image-set(
+    url(../products/macbook_air.jpeg),
+    url(../products/macbook_air_2x.jpeg)
+  );
+}
+.airpods-pro {
+  background-image: image-set(
+    url(../products/airpods_pro.jpeg),
+    url(../products/airpods_pro_2x.jpeg)
+  );
+}
+
+@media (min-width: 1024px) {
+  .ipad-pro {
+    background-image: image-set(
+      url(../products/ipad_pro_wide.jpeg),
+      url(../products/ipad_pro_wide_2x.jpeg)
+    );
+  }
+
+  .ipad-air {
+    background-image: image-set(
+      url(../products/ipad_air_wide.jpeg),
+      url(../products/ipad_air_wide_2x.jpeg)
+    );
+  }
+  .iphone-15pro {
+    background-image: image-set(
+      url(../products/iphone15_pro_wide.jpeg),
+      url(../products/iphone15_pro_wide_2x.jpeg)
+    );
+  }
+
+  .box {
+    h2 {
+      font-size: var(--lg-main-title);
+    }
+
+    .explanation {
+      font-size: var(--lg-sub-title);
+    }
+
+    ul {
+      .link {
+        font-size: var(--lg-button-text);
+      }
+    }
+  }
+}
