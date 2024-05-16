@@ -59,6 +59,7 @@
   ul {
     .link {
       display: inline-block;
+      border-radius: 2rem;
       font-size: var(--sm-button-text);
       transition: ease all 0.5s;
     }

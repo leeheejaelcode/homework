@@ -22,7 +22,6 @@
     gap: var(--base-spacing);
 
     .link {
-      border-radius: 2rem;
       padding: var(--x-small-spacing);
     }
   }
