@@ -3,10 +3,7 @@
 ![GIFMaker_me](https://github.com/leeheejaelcode/homework/assets/138003632/6a2df940-1ebc-4f82-890b-32649e6fdbb8)
 
 
-
 ## 마크업
-
----
 
 1.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
     클래스명을 지정하였으며
@@ -323,5 +320,14 @@
 그렇지만 grid와 card를 컴포넌트화 해서 만든 덕분에
 어렵지 않게 마크업과 레이아웃 작업을 해나아갔습니다.
 
+중간에 link:hover 효과도 줘서 심심하지 않은 애니메이션을 만들어봤습니다..
+
 부트스트랩과 테일윈드와 비슷한 방향으로 cols 클래스를 사용하다보니
 다음에 배울 부트스트랩과 테일윈드에서도 어렵지않게 사용할 수 있을것 같습니다.
+
+## 결과
+**데스크탑 버전**
+![데스크탑 버전](https://github.com/leeheejaelcode/homework/assets/138003632/98b1f78d-167e-421f-b4bb-5460eba44603)
+**모바일 버전**
+![모바일 버전](https://github.com/leeheejaelcode/homework/assets/138003632/50905348-4a8c-4ea2-a85d-7e9ae306dfbb)
+
