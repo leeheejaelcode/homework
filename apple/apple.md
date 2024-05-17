@@ -5,7 +5,34 @@
 
 ## 마크업
 
-1.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
+1. div grid-container로 box를 감싼후 grid를 사용하고
+   cols 클래스를 이용하여
+   반응형 레이아웃 처리를 하였습니다
+```html
+<!-- grid container 시작 -->
+<section class="grid-container">
+  <h1 class="sr-only">Apple 제품</h1>
+      <div class="box dark-box cols-12">
+        <article class="card ipad-pro">
+          <h2>iPad Pro</h2>
+          <p class="explanation" aria-label="ipad-pro 제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+          </p>
+          <p class="release-date" aria-label="출시일 추후 공개">
+            출시일 추후 공개
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+    ...(이하 생략)
+</section>
+<!-- grid container 끝 -->
+```
+2.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
     클래스명을 지정하였으며
     밝은배경과 어두운배경의 디자인을 달리하기위해
     dark-box, white-box로 클래스를 나누었습니다
@@ -27,31 +54,15 @@
 </div>
 ```
 
-2. grid 컴포넌트를 사용해야하는 부분에는 div grid-container로 감싼후 grid를 사용하고
-   cols 클래스를 이용하여
-   반응형 레이아웃 처리를 하였습니다
+
+3. 데스크탑 화면에서 보여지지않는 br 태그는 lg-none class를 주어 화면에 보여지지 않게 하였습니다
 
 ```html
-<!-- grid container 시작 -->
-<div class="grid-container">
-  <div class="box dark-box cols-12 lg-cols-6">
-    <article class="card airpods-pro">
-      <h2>airPods Pro</h2>
-      <p class="explanation" aria-label="airPods Pro 제품 설명">
-        전에 없던 청취 경험.<br class="lg-none" />
-        적응형 오디오.
-      </p>
-      <ul>
-        <li><a href="/" class="link more">더 알아보기</a></li>
-        <li><a href="/" class="link price">가격 보기</a></li>
-      </ul>
-    </article>
-  </div>
-</div>
-<!-- grid container 끝 -->
+    <p class="explanation" aria-label="ipad-pro 제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+    </p>
 ```
-
-3. 데스크탑 화면에서 보여지지않는 br 태그는 class를 주어 화면에 보여지지 않게 하였습니다
 
 ## css
 
@@ -59,6 +70,9 @@
    card-component.css에 담고 변수를 사용하였습니다
 
 ```css
+
+/* card-components.css */
+
 .card {
   --card-height: var(--size);
   --sm-padding-top: var(--large-spacing);
@@ -121,6 +135,8 @@
 2. apple.css를 통하여 디자인 구조를 만들고 .box의 공통적인 디자인을 만들었습니다.
 
 ```css
+/* apple.css */
+
 /* box 공통 속성 */
 .box {
   margin-top: 1rem;
