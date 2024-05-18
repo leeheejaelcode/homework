@@ -12,16 +12,22 @@
 ```html
 <div class="box">
   <article class="card ipad-pro dark-box">
-    <h2 class="product-name" aria-label="제품명">iPad Pro</h2>
-    <p class="explanation" aria-label="제품 설명">
-      놀라우리만치 얇다.<br class="lg-none" />
-      엄청나게 강력하다.
-    </p>
-    <p class="release-date" aria-label="출시일 추후 공개">출시일 추후 공개</p>
-    <ul>
-      <li><a href="/" class="link more">더 알아보기</a></li>
-      <li><a href="/" class="link price">가격 보기</a></li>
-    </ul>
+    <div class="box">
+      <article class="card ipad-pro dark-box">
+        <h2 class="product-name" aria-label="제품명">iPad Pro</h2>
+        <p class="explanation" aria-label="제품 설명">
+          놀라우리만치 얇다.<br class="lg-none" />
+          엄청나게 강력하다.
+        </p>
+        <p class="release-date" aria-label="출시일 추후 공개">
+          출시일 추후 공개
+        </p>
+        <ul>
+          <li><a href="/" class="link more">더 알아보기</a></li>
+          <li><a href="/" class="link price">가격 보기</a></li>
+        </ul>
+      </article>
+    </div>
   </article>
 </div>
 ```
