@@ -6,7 +6,7 @@
 
 ---
 
-1.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
+1.  .product-name를 제품 명, .explanation을 제품설명, .release-date를 출시일로
     클래스명을 지정하였으며
     밝은배경과 어두운배경의 디자인을 달리하기위해
     dark-box, white-box로 클래스를 나누었습니다
@@ -14,8 +14,8 @@
 ```html
 <div class="box dark-box">
   <article class="card ipad-pro">
-    <h2>iPad Pro</h2>
-    <p class="explanation" aria-label="ipad-pro 제품 설명">
+    <h2 class="product-name" aria-label="제품명">iPad Pro</h2>
+    <p class="explanation" aria-label="제품 설명">
       놀라우리만치 얇다.<br class="lg-none" />
       엄청나게 강력하다.
     </p>
@@ -28,27 +28,30 @@
 </div>
 ```
 
-2. grid 컴포넌트를 사용해야하는 부분에는 div grid-container로 감싼후 grid를 사용하고
+2. div grid-container로 감싼후 grid를 사용하고
    cols 클래스를 이용하여
    반응형 레이아웃 처리를 하였습니다
 
 ```html
 <!-- grid container 시작 -->
-<div class="grid-container">
-  <div class="box dark-box cols-12 lg-cols-6">
-    <article class="card airpods-pro">
-      <h2>airPods Pro</h2>
-      <p class="explanation" aria-label="airPods Pro 제품 설명">
-        전에 없던 청취 경험.<br class="lg-none" />
-        적응형 오디오.
+<section class="grid-container">
+  <h1 class="sr-only">Apple 제품</h1>
+  <div class="box cols-12">
+    <article class="card dark-box ipad-pro">
+      <h2 class="product-name">iPad Pro</h2>
+      <p class="explanation" aria-label="ipad-pro 제품 설명">
+        놀라우리만치 얇다.<br class="lg-none" />
+        엄청나게 강력하다.
       </p>
+      <p class="release-date" aria-label="출시일">출시일 추후 공개</p>
       <ul>
         <li><a href="/" class="link more">더 알아보기</a></li>
         <li><a href="/" class="link price">가격 보기</a></li>
       </ul>
     </article>
   </div>
-</div>
+  ... 이하 생략
+</section>
 <!-- grid container 끝 -->
 ```
 
@@ -93,6 +96,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
 
 .cols-12 {
@@ -124,8 +128,7 @@
 ```css
 /* box 공통 속성 */
 .box {
-  margin-top: 1rem;
-  h2 {
+  .product-name {
     font-size: var(--sm-main-title);
     font-weight: 700;
   }
@@ -305,6 +308,29 @@
 }
 ```
 
+7. 컨테이너 쿼리를 사용하여서 1024px 이상인 화면에선 font-size를 바뀌게 설정 하였습니다.
+
+```css
+.grid-container {
+  container-type: inline-size;
+  container-name: grid;
+}
+
+.box {
+  .product-name {
+    font-size: var(--sm-main-title);
+    font-weight: 700;
+  }
+
+  @container grid (min-width: 1024px) {
+    .product-name {
+      font-size: var(--lg-main-title);
+    }
+  }
+  ... 이하 생략;
+}
+```
+
 ---
 
 ## 어려웠던 점
@@ -323,3 +349,6 @@
 
 부트스트랩과 테일윈드와 비슷한 방향으로 cols 클래스를 사용하다보니
 다음에 배울 부트스트랩과 테일윈드에서도 어렵지않게 사용할 수 있을것 같습니다.
+
+컨테이너 쿼리 사용법을 추가로 배워서 사용하였지만
+컨테이너 쿼리와 미디어 쿼리를 사용해야하는지 잘 모르겠습니다 ㅎㅎ
