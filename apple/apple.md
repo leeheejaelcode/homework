@@ -4,10 +4,7 @@
 
 
 ## 마크업
-
-<<<<<<< HEAD
 ---
-
 1.  .product-name를 제품 명, .explanation을 제품설명, .release-date를 출시일로
 =======
 1. div grid-container로 box를 감싼후 grid를 사용하고
@@ -38,7 +35,6 @@
 <!-- grid container 끝 -->
 ```
 2.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
->>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
     클래스명을 지정하였으며
     밝은배경과 어두운배경의 디자인을 달리하기위해
     dark-box, white-box로 클래스를 나누었습니다
@@ -60,7 +56,6 @@
 </div>
 ```
 
-<<<<<<< HEAD
 2. div grid-container로 감싼후 grid를 사용하고
    cols 클래스를 이용하여
    반응형 레이아웃 처리를 하였습니다
@@ -95,7 +90,6 @@
             놀라우리만치 얇다.<br class="lg-none" />
             엄청나게 강력하다.
     </p>
->>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
 ```
 
 ## css
@@ -400,14 +394,13 @@
 부트스트랩과 테일윈드와 비슷한 방향으로 cols 클래스를 사용하다보니
 다음에 배울 부트스트랩과 테일윈드에서도 어렵지않게 사용할 수 있을것 같습니다.
 
-<<<<<<< HEAD
 컨테이너 쿼리 사용법을 추가로 배워서 사용하였지만
 컨테이너 쿼리와 미디어 쿼리를 사용해야하는지 잘 모르겠습니다 ㅎㅎ
-=======
+
 ## 결과
 **데스크탑 버전**
 ![데스크탑 버전](https://github.com/leeheejaelcode/homework/assets/138003632/98b1f78d-167e-421f-b4bb-5460eba44603)
 **모바일 버전**
 ![모바일 버전](https://github.com/leeheejaelcode/homework/assets/138003632/50905348-4a8c-4ea2-a85d-7e9ae306dfbb)
 
->>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
+
