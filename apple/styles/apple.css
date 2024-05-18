@@ -36,12 +36,22 @@
   --blue-400: #006edb;
 }
 
+.grid-container {
+  container-type: inline-size;
+  container-name: grid;
+}
+
 /* box 공통 속성 */
 .box {
-  margin-top: 1rem;
-  h2 {
+  .product-name {
     font-size: var(--sm-main-title);
     font-weight: 700;
+  }
+
+  @container grid (min-width: 1024px) {
+    .product-name {
+      font-size: var(--lg-main-title);
+    }
   }
 
   .explanation {
@@ -49,6 +59,11 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: var(--x-small-spacing);
+  }
+  @container grid (min-width: 1024px) {
+    .explanation {
+      font-size: var(--lg-sub-title);
+    }
   }
 
   .release-date {
@@ -64,6 +79,14 @@
       transition: ease all 0.5s;
     }
 
+    @container grid (min-width: 1024px) {
+      ul {
+        .link {
+          font-size: var(--lg-button-text);
+        }
+      }
+    }
+
     .more {
       color: var(--white-text);
     }
@@ -71,7 +94,7 @@
 }
 /* 어두운 테마 */
 .dark-box {
-  h2,
+  .product-name,
   .explanation {
     color: var(--white-text);
   }
@@ -97,7 +120,7 @@
 }
 /* 밝은 테마 */
 .white-box {
-  h2,
+  .product-name,
   .explanation {
     color: var(--black-text);
   }
@@ -188,21 +211,5 @@
       url(../products/iphone15_pro_wide.jpeg),
       url(../products/iphone15_pro_wide_2x.jpeg)
     );
-  }
-
-  .box {
-    h2 {
-      font-size: var(--lg-main-title);
-    }
-
-    .explanation {
-      font-size: var(--lg-sub-title);
-    }
-
-    ul {
-      .link {
-        font-size: var(--lg-button-text);
-      }
-    }
   }
 }
