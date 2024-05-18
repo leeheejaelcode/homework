@@ -14,56 +14,56 @@
   </head>
   <body>
     <!-- 카드 레이아웃 -->
-    <h1 class="sr-only">Apple 제품</h1>
-    <div class="box dark-box">
-      <article class="card ipad-pro">
-        <h2>iPad Pro</h2>
-        <p class="explanation" aria-label="ipad-pro 제품 설명">
-          놀라우리만치 얇다.<br class="lg-none" />
-          엄청나게 강력하다.
-        </p>
-        <p class="release-date" aria-label="출시일 추후 공개">
-          출시일 추후 공개
-        </p>
-        <ul>
-          <li><a href="/" class="link more">더 알아보기</a></li>
-          <li><a href="/" class="link price">가격 보기</a></li>
-        </ul>
-      </article>
-    </div>
-    <div class="box white-box">
-      <article class="card ipad-air">
-        <h2>iPad air</h2>
-        <p class="explanation" aria-label="ipad-air 제품 설명">
-          두 가지 사이즈. 더 빠른칩.<br class="lg-none" />
-          무엇이든 거뜬하게.
-        </p>
-        <p class="release-date" aria-label="출시일 추후 공개">
-          출시일 추후 공개
-        </p>
-        <ul>
-          <li><a href="/" class="link more">더 알아보기</a></li>
-          <li><a href="/" class="link price">가격 보기</a></li>
-        </ul>
-      </article>
-    </div>
-    <div class="box dark-box">
-      <article class="card iphone-15pro">
-        <h2>iPad 15 Pro</h2>
-        <p class="explanation" aria-label="iPad 15 Pro 제품 설명">
-          티타늄, 초강력, 초경량, 초프로.
-        </p>
-        <ul>
-          <li><a href="/" class="link more">더 알아보기</a></li>
-          <li><a href="/" class="link price">가격 보기</a></li>
-        </ul>
-      </article>
-    </div>
     <!-- grid container 시작 -->
-    <div class="grid-container">
-      <div class="box white-box cols-12 lg-cols-6">
-        <article class="card iphone-15">
-          <h2>iPhone 15</h2>
+    <section class="grid-container">
+      <h1 class="sr-only">Apple 제품</h1>
+      <div class="box cols-12">
+        <article class="card dark-box ipad-pro">
+          <h2 class="product-name">iPad Pro</h2>
+          <p class="explanation" aria-label="ipad-pro 제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+          </p>
+          <p class="release-date" aria-label="출시일 추후 공개">
+            출시일 추후 공개
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+      <div class="box cols-12">
+        <article class="card white-box ipad-air">
+          <h2 class="product-name">iPad air</h2>
+          <p class="explanation" aria-label="ipad-air 제품 설명">
+            두 가지 사이즈. 더 빠른칩.<br class="lg-none" />
+            무엇이든 거뜬하게.
+          </p>
+          <p class="release-date" aria-label="출시일 추후 공개">
+            출시일 추후 공개
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+      <div class="box cols-12">
+        <article class="card dark-box iphone-15pro">
+          <h2 class="product-name">iPad 15 Pro</h2>
+          <p class="explanation" aria-label="iPad 15 Pro 제품 설명">
+            티타늄, 초강력, 초경량, 초프로.
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+      <div class="box cols-12 lg-cols-6">
+        <article class="card white-box iphone-15">
+          <h2 class="product-name">iPhone 15</h2>
           <p class="explanation" aria-label="iphone-15 제품 설명">
             새로운 카메라.
             <br class="lg-none" />새로운 디자인. <br class="lg-none" />새로움이
@@ -75,9 +75,9 @@
           </ul>
         </article>
       </div>
-      <div class="box dark-box cols-12 lg-cols-6">
-        <article class="card watch">
-          <h2>WATCH</h2>
+      <div class="box cols-12 lg-cols-6">
+        <article class="card dark-box watch">
+          <h2 class="product-name">WATCH</h2>
           <p class="explanation" aria-label="apple watch 제품 설명">
             보다 똑똑, 보다 또렷, 보다 강력.
           </p>
@@ -87,9 +87,9 @@
           </ul>
         </article>
       </div>
-      <div class="box white-box cols-12 lg-cols-6">
-        <article class="card macbook-air">
-          <h2>MacBook Air</h2>
+      <div class="box cols-12 lg-cols-6">
+        <article class="card white-box macbook-air">
+          <h2 class="product-name">MacBook Air</h2>
           <p class="explanation" aria-label="MacBook Air 제품 설명">
             날렵하게. 강력하게. M3답게.
           </p>
@@ -99,9 +99,9 @@
           </ul>
         </article>
       </div>
-      <div class="box dark-box cols-12 lg-cols-6">
-        <article class="card airpods-pro">
-          <h2>airPods Pro</h2>
+      <div class="box cols-12 lg-cols-6">
+        <article class="card dark-box airpods-pro">
+          <h2 class="product-name">airPods Pro</h2>
           <p class="explanation" aria-label="airPods Pro 제품 설명">
             전에 없던 청취 경험.<br class="lg-none" />
             적응형 오디오.
@@ -112,7 +112,7 @@
           </ul>
         </article>
       </div>
-    </div>
+    </section>
     <!-- grid container 끝 -->
   </body>
 </html>
