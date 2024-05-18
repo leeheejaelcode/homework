@@ -1,12 +1,44 @@
 # 5월 16일 과제
 
-**결과**
+![GIFMaker_me](https://github.com/leeheejaelcode/homework/assets/138003632/6a2df940-1ebc-4f82-890b-32649e6fdbb8)
+
 
 ## 마크업
 
+<<<<<<< HEAD
 ---
 
 1.  .product-name를 제품 명, .explanation을 제품설명, .release-date를 출시일로
+=======
+1. div grid-container로 box를 감싼후 grid를 사용하고
+   cols 클래스를 이용하여
+   반응형 레이아웃 처리를 하였습니다
+```html
+<!-- grid container 시작 -->
+<section class="grid-container">
+  <h1 class="sr-only">Apple 제품</h1>
+      <div class="box dark-box cols-12">
+        <article class="card ipad-pro">
+          <h2>iPad Pro</h2>
+          <p class="explanation" aria-label="ipad-pro 제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+          </p>
+          <p class="release-date" aria-label="출시일 추후 공개">
+            출시일 추후 공개
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+    ...(이하 생략)
+</section>
+<!-- grid container 끝 -->
+```
+2.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
+>>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
     클래스명을 지정하였으며
     밝은배경과 어두운배경의 디자인을 달리하기위해
     dark-box, white-box로 클래스를 나누었습니다
@@ -28,6 +60,7 @@
 </div>
 ```
 
+<<<<<<< HEAD
 2. div grid-container로 감싼후 grid를 사용하고
    cols 클래스를 이용하여
    반응형 레이아웃 처리를 하였습니다
@@ -53,9 +86,17 @@
   ... 이하 생략
 </section>
 <!-- grid container 끝 -->
-```
+=======
 
-3. 데스크탑 화면에서 보여지지않는 br 태그는 class를 주어 화면에 보여지지 않게 하였습니다
+3. 데스크탑 화면에서 보여지지않는 br 태그는 lg-none class를 주어 화면에 보여지지 않게 하였습니다
+
+```html
+    <p class="explanation" aria-label="ipad-pro 제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+    </p>
+>>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
+```
 
 ## css
 
@@ -63,6 +104,9 @@
    card-component.css에 담고 변수를 사용하였습니다
 
 ```css
+
+/* card-components.css */
+
 .card {
   --card-height: var(--size);
   --sm-padding-top: var(--large-spacing);
@@ -126,6 +170,8 @@
 2. apple.css를 통하여 디자인 구조를 만들고 .box의 공통적인 디자인을 만들었습니다.
 
 ```css
+/* apple.css */
+
 /* box 공통 속성 */
 .box {
   .product-name {
@@ -347,8 +393,21 @@
 그렇지만 grid와 card를 컴포넌트화 해서 만든 덕분에
 어렵지 않게 마크업과 레이아웃 작업을 해나아갔습니다.
 
+중간에 link:hover 효과도 줘서 심심하지 않은 애니메이션을 만들어봤습니다..
+(가격보기 주변에 그림자 효과)
+![image](https://github.com/leeheejaelcode/homework/assets/138003632/28c3a21f-2f82-40df-9dfc-7eec6f0f1250)
+
 부트스트랩과 테일윈드와 비슷한 방향으로 cols 클래스를 사용하다보니
 다음에 배울 부트스트랩과 테일윈드에서도 어렵지않게 사용할 수 있을것 같습니다.
 
+<<<<<<< HEAD
 컨테이너 쿼리 사용법을 추가로 배워서 사용하였지만
 컨테이너 쿼리와 미디어 쿼리를 사용해야하는지 잘 모르겠습니다 ㅎㅎ
+=======
+## 결과
+**데스크탑 버전**
+![데스크탑 버전](https://github.com/leeheejaelcode/homework/assets/138003632/98b1f78d-167e-421f-b4bb-5460eba44603)
+**모바일 버전**
+![모바일 버전](https://github.com/leeheejaelcode/homework/assets/138003632/50905348-4a8c-4ea2-a85d-7e9ae306dfbb)
+
+>>>>>>> 4a9aae8244040b755378739c3513dfdb738f86d1
