@@ -6,42 +6,13 @@
 ## 마크업
 ---
 1.  .product-name를 제품 명, .explanation을 제품설명, .release-date를 출시일로
-=======
-1. div grid-container로 box를 감싼후 grid를 사용하고
-   cols 클래스를 이용하여
-   반응형 레이아웃 처리를 하였습니다
-```html
-<!-- grid container 시작 -->
-<section class="grid-container">
-  <h1 class="sr-only">Apple 제품</h1>
-      <div class="box dark-box cols-12">
-        <article class="card ipad-pro">
-          <h2>iPad Pro</h2>
-          <p class="explanation" aria-label="ipad-pro 제품 설명">
-            놀라우리만치 얇다.<br class="lg-none" />
-            엄청나게 강력하다.
-          </p>
-          <p class="release-date" aria-label="출시일 추후 공개">
-            출시일 추후 공개
-          </p>
-          <ul>
-            <li><a href="/" class="link more">더 알아보기</a></li>
-            <li><a href="/" class="link price">가격 보기</a></li>
-          </ul>
-        </article>
-      </div>
-    ...(이하 생략)
-</section>
-<!-- grid container 끝 -->
-```
-2.  h2를 제목, .explanation을 부제목, .release-date를 출시일로
     클래스명을 지정하였으며
     밝은배경과 어두운배경의 디자인을 달리하기위해
     dark-box, white-box로 클래스를 나누었습니다
 
 ```html
-<div class="box dark-box">
-  <article class="card ipad-pro">
+<div class="box">
+  <article class="card ipad-pro dark-box">
     <h2 class="product-name" aria-label="제품명">iPad Pro</h2>
     <p class="explanation" aria-label="제품 설명">
       놀라우리만치 얇다.<br class="lg-none" />
@@ -55,38 +26,37 @@
   </article>
 </div>
 ```
-
-2. div grid-container로 감싼후 grid를 사용하고
+2. div grid-container로 box를 감싼후 grid를 사용하고
    cols 클래스를 이용하여
    반응형 레이아웃 처리를 하였습니다
-
 ```html
 <!-- grid container 시작 -->
 <section class="grid-container">
   <h1 class="sr-only">Apple 제품</h1>
-  <div class="box cols-12">
-    <article class="card dark-box ipad-pro">
-      <h2 class="product-name">iPad Pro</h2>
-      <p class="explanation" aria-label="ipad-pro 제품 설명">
-        놀라우리만치 얇다.<br class="lg-none" />
-        엄청나게 강력하다.
-      </p>
-      <p class="release-date" aria-label="출시일">출시일 추후 공개</p>
-      <ul>
-        <li><a href="/" class="link more">더 알아보기</a></li>
-        <li><a href="/" class="link price">가격 보기</a></li>
-      </ul>
-    </article>
-  </div>
-  ... 이하 생략
+      <div class="box cols-12">
+        <article class="card dark-box ipad-pro">
+          <h2 class="product-name" aria-label="제품 명">iPad Pro</h2>
+          <p class="explanation" aria-label="제품 설명">
+            놀라우리만치 얇다.<br class="lg-none" />
+            엄청나게 강력하다.
+          </p>
+          <p class="release-date" aria-label="출시일">
+            출시일 추후 공개
+          </p>
+          <ul>
+            <li><a href="/" class="link more">더 알아보기</a></li>
+            <li><a href="/" class="link price">가격 보기</a></li>
+          </ul>
+        </article>
+      </div>
+    ...(이하 생략)
 </section>
 <!-- grid container 끝 -->
-=======
-
+```
 3. 데스크탑 화면에서 보여지지않는 br 태그는 lg-none class를 주어 화면에 보여지지 않게 하였습니다
 
 ```html
-    <p class="explanation" aria-label="ipad-pro 제품 설명">
+    <p class="explanation" aria-label="제품 설명">
             놀라우리만치 얇다.<br class="lg-none" />
             엄청나게 강력하다.
     </p>
