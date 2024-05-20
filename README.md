@@ -10,6 +10,6 @@
 
 **[md파일](https://github.com/leeheejaelcode/homework/blob/main/naver/naver.md)**
 ## 5월 3일 avatars 숙제
-**[페이지]((https://leeheejaelcode.github.io/homework/avatars/avatars.html)**
+**[페이지](https://leeheejaelcode.github.io/homework/avatars/avatars.html)**
 
 **[md파일](https://github.com/leeheejaelcode/homework/blob/main/avatars/avatars.md)**
