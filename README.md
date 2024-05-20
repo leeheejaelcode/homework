@@ -2,7 +2,7 @@
 태킷 프론트드 스쿨10기 과제 저장소
 
 ## 5월 16일 apple 숙제
-**[페이지](https://github.com/leeheejaelcode/homework/blob/main/apple/apple.html)**
+**[페이지](https://github.com/leeheejaelcode/homework/apple/apple.html)**
 
 **[md파일](https://github.com/leeheejaelcode/homework/blob/main/apple/apple.md)**
 ## 5월 10일 naver 숙제
